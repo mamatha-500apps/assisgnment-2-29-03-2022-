@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<!-- QN-8 -->
+</head>
+<body>
+    <p id="root"></p>
+    <script>
+        var officers = [ { id: 20, name: 'Captain Piett' },
+         { id: 24, name: 'General Veers' }, 
+         { id: 56, name: 'Admiral Ozzel' }, 
+         { id: 88, name: 'Commander Jerjerrod' } ]
+let office= [];
+for (let i = 0; i < officers.length; i++) {
+    if (officers[i].name=='General Veers') {
+        office.push(officers[i]);
+    }
+}
+console.log(office);
+    </script>
+</body>
+</html>
