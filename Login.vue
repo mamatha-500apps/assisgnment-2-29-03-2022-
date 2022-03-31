@@ -7,6 +7,8 @@
         <button @click="fun()">Submit
         </button>
         </form>  
+
+        
     </div>
 </template>
 <script>

@@ -3,9 +3,7 @@
     <table align="center">
 
 <thead>
-
 <tr>
-
 <th>Name</th>
 
 <th>Email</th>

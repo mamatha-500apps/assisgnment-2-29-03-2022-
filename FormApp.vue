@@ -10,7 +10,3 @@ export default {
   name: 'FormApp',
 }
 </script>
-
-<style scoped>
-
-</style>"Informatiom"
