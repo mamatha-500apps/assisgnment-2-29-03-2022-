@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<style>
+</style>
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="validateform()" >  
+        Enter Your  First Name: <input type="text" name="name"  placeholder="Enter FirstName" required><br/>  <br>  
+        Enter Your Last Name: <input type="text" name="password" placeholder="Enter LastName" required><br/>  
+        Gender:<br>
+        <input type="radio" name="gender" value="Female">Female</input><br/>
+        <input type="radio" name="gender" value="Male">Male</input><br/>
+    Languages known:<br>
+        <input type="checkbox" id="C" name="C" value="C">C</input ><br>
+        <input type="checkbox" id="java"  name="java" value="java">java</input ><br>
+        <input type="checkbox" id="Python" name="Python" value="Python">Python</input ><br>
+        <input type="checkbox" id="JavaScript" name="JavaScript" value="JavaScript">JavaScript</input ><br>
+        <input type="submit" value="register">  
+        </form>  
+</body>
+<script>
+   function validateform(){  
+// var name=document.myform.name.value;  
+// var password=document.myform.password.value;  
+let languages="";
+if(document.myform.C.checked) languages=languages+" "+document.myform.C.value;
+if(document.myform.java.checked) languages=languages+" "+document.myform.java.value;
+if(document.myform.Python.checked) languages=languages+" "+document.myform.Python.value;
+if(document.myform.JavaScript.checked) languages=languages+" "+document.myform.JavaScript.value;
+document.write("About    "+"</br>"+  document.myform.name.value+" "+document.myform.password.value+"</br>"+"Gender is:"+document.myform.gender.value+"</br>"+"Languages Known"+languages);
+// if (name==null || name=="")
+// {  
+//   alert("Name can't be blank");  
+//   return false;  
+// }else if(password.length<6)
+// {  
+//   alert("Password must be at least 6 characters long.");  
+//   return false;  
+// } 
+}  
+</script>
+</html>
