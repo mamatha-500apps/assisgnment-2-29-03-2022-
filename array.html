@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Arrays</title>
+<button onclick="arr()">Click Me</button>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function arr(){
+        var a=["Hi","Hello","Welcome"]
+        txt="";
+
+        for (var i=0;i<a.length;i++)
+        {
+            txt+=a[i]+"</br>";
+        }
+        document.getElementById("demo").innerHTML=txt;
+    }
+    </script>
+</body>
+</html>
