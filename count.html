@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <!-- <p>Question-2</p> -->
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="validateform()" >  
+        Enter a String: <input type="text" name="word"  placeholder="Enter text" required><br/>  <br>  
+        <input type="submit" value="count">  
+        </form>  
+    <script>
+        function validateform()
+        {
+        var e = document.myform.word.value;
+      document.write("The Count of:"  +  e  +" is  " + e.length);
+      
+        }
+        </script>
+</body>
+</html>

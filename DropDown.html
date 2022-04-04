@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<!-- <h1 > Question -7</h1> -->
+</head>
+<body>
+    <form onsubmit="myfun()">
+        <select >
+          <option value="open" onclick="open()" >open</option>
+          <option value="closed" onclick="closed()" >closed</option>
+          <option value="Pending" onclick="pending()">Pending</option>
+          <input type="submit" value="Login"> 
+        </select>
+    </form>
+   
+    <script>
+        var users=[
+{email: "Eliseo@gardner.biz",id: 1,"name": "id labore ex et quamlaborum","status":"open"},
+ {"email": "Jayne_Kuhic@sydney.com","id": 2,"name": "quovero reiciendis velit similiqueearum","status":"pending"}, 
+ {"email": "Nikita@garfield.biz","id": 3,"name":"odioadipisci rerum autanimi","status":"closed"},
+ {"email": "Lew@alysha.tv","id": 4,"name": "alias odio sit","status":"pending"}
+]; 
+
+function myfun()
+{
+  
+function open() 
+{
+console.log(this.users[0]);
+
+}
+function pending(){
+console.log(this.users[1]);
+console.log(this.user[3]);
+}
+function closed(){
+console.log(this.users[2]);
+}
+}
+</script>
+</body>
+</html>

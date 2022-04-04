@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <!-- <p>Question-7</p> -->
+</head>
+<body>
+    <p id="root" onclick="myfun()">Hello</p>
+    <form name="myform">
+    <input type="text" name="word" placeholder="Enter the text" required/>
+   
+</form>
+    <script>
+        function myfun()
+        {
+            text=document.myform.word.value
+            document.getElementById("root").innerHTML=text;
+        }
+        
+        </script>
+</body>
+</html>
