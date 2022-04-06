@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <form name="myform" method="post" onsubmit="myfun()">
+    <input type="text" name="word" placeholder="Enter Text" />
+    <button onclick="myfun()">Search</button>
+</form>
+</head>
+<body>
+    <p id="root"></p>
+    <script>
+        function myfun(){
+const array = ["agile","crm","mantra","technologies","500apps","infinity"];
+const substring = document.myform.word.value;
+const match = array.find(element =>
+ {
+  if (element.includes(substring)) {
+    return true;
+  }
+});
+document.write(match); 
+if(match !== undefined)
+{
+    
+}
+}
+    </script>
+</body>
+</html>
