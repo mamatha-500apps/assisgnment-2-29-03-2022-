@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <p>Fifth Question</p>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const myfun={
+            firstName:"Mantra",
+            LastName:"Technologies",
+            FullName:function()
+            {
+                return this.firstName+""+this.LastName;
+            }
+        }
+        document.getElementById("demo").innerHTML=myfun.FullName();
+    </script>
+</body>
+</html>

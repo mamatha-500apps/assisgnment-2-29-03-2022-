@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <h1>Question-3</h1>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function myfun() {
+         const date = new Date();
+         document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+         setTimeout(function() {myfun()}, 5000);
+        }
+        myfun();
+        
+        </script>
+</body>
+</html>
