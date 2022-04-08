@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<form name="myform" >
+  1st Number:  <input type="number" name="Fnumber" required/><br><br>
+  2nd Number:<input type="number" name="Snumber" required/></br><br>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+</form>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+   function Multiply()
+   {
+      var a=document.myform.Fnumber.value;
+      var b=document.myform.Snumber.value;
+      document.write("The Result is: "+a*b);
+    }
+    function divide()
+    {
+      var a=document.myform.Fnumber.value;
+      var b=document.myform.Snumber.value;
+      document.write("The Result is:"+a/b);
+    }
+</script>
+</body>
+</html>
