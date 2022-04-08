@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cookies</title>
+    <h3>This is Cookies page</h3>
+</head>
+
+<body>
+    <form name="myform" onsubmit="cookies()">
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" required><br><br><br>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" required><br><br>
+        <button onclick="createCookie()">submit</button>
+    </form>
+    <script>
+        function cookies() {
+            document.write(document.myform.name.value + "<br>" + document.myform.password.value);
+          
+        }
+        function createCookie(nam, psw) {
+            let name = document.getElementById('name');
+            let password = document.getElementById('password');
+            today = new Date();
+            var expire = new Date();
+            expire.setTime(today.getTime() + 3600000 * 24 * 15);
+            document.cookie = "name=" + name.value + ";path=/" + ";expires=" + expire.toUTCString();
+            document.cookie = "password=" + encodeURI(password.value) + ";path=/" + ";expires=" + expire.toUTCString();
+        }
+        window.onload = function () {
+            var name = document.getElementById('name').value;
+            var pass = document.getElementById('password').value;
+            document.getElementById('name').value = name;
+            document.getElementById('password').value = pass;
+        }
+    </script>
+
+</body>
+
+</html>
