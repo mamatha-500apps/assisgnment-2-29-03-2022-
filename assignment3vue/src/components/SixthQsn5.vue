@@ -1,47 +1,59 @@
 <template>
 <div>
 <b-dropdown id="dropdown-1" text="Country" class="m-md-2">
-<b-dropdown-item @click="India()">India</b-dropdown-item>
-<b-dropdown-item @click="srilanka()">srilanka</b-dropdown-item>
-<b-dropdown-item @click="us()">us</b-dropdown-item>
+<b-dropdown-item @click="getData()">India</b-dropdown-item>
+<b-dropdown-item @click="getData1()">Canada</b-dropdown-item>
+<b-dropdown-item @click="US()">United States</b-dropdown-item>
+
 </b-dropdown>
+{{ posts }}
 </div>
 </template>
 <script>
 export default {
 name: "QuestioN6",
-data() {
-return {
-countrydet: [
-{ id: 1, name: "India" },
-{ id: 2, name: "srilanka" },
-{ id: 3, name: "us" },
-{ id: 4, name: "us" },
-{ id: 5, name: "India" },
-],
-};
+ data(){
+        return{
+    posts: " ",
+        }
+    },
+    methods:{
+   async getData() {
+try {
+let response = await fetch(
+"http://universities.hipolabs.com/search?country=India"
+);
+this.posts = await response.json();
+} catch (error) {
+console.log(error);
+}
 },
-methods: {
-India() {
-let country = this.countrydet.map((arrItem) => {
-if (arrItem.name == "India")
-return arrItem;
-});
-console.log(country);
+async getData1() {
+try {
+let response = await fetch(
+"http://universities.hipolabs.com/search?country=Canada"
+);
+this.posts = await response.json();
+} catch (error) {
+console.log(error);
+}
 },
-srilanka() {
-let country = this.countrydet.map((arrItem) => {
-if (arrItem.name == "srilanka")
-return arrItem;
-});
-console.log(country);
+async US() {
+try {
+let response = await fetch(
+"http://universities.hipolabs.com/search?country=United States"
+);
+this.posts = await response.json();
+} catch (error) {
+console.log(error);
+}
 },
-us() {
-let country = this.countrydet.map((arrItem) => {
-if (arrItem.name == "us") return arrItem;
-});
-console.log(country);
-},
-},
-};
+created(){
+    this.getData();
+    this.getData1();
+    this.US();
+}
+}
+}
+
 </script>
