@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>FifthQsn</h1>
+<h1>FifthQsn</h1>
 <b-table striped hover :items="posts" :fields="fields"> </b-table>
 {{ posts }}
 </div>
