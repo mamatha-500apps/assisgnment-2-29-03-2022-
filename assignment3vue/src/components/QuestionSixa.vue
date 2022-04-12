@@ -1,6 +1,6 @@
 <template>
     <div>
-<QuestionSix  :msg="msg" ref="refo" :name="name"/>
+<QuestionSix  msg="msg" ref="refo" :name="name"/>
     <button @click="func()">ClickMe</button>
     </div>
 </template>

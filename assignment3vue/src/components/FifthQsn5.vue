@@ -1,21 +1,37 @@
 <template>
 <div>
-{{ info }}
+<h1>FifthQsn</h1>
+<b-table striped hover :items="posts" :fields="fields"> </b-table>
+{{ posts }}
 </div>
 </template>
 <script>
-var axios = require("axios").default;
 export default {
-name: "FifTH",
+name: "queS4",
 data() {
 return {
-info: " ",
+posts: " ",
 };
 },
-mounted() {
-axios
-.get("http://universities.hipolabs.com/search?country=${CountryName}")
-.then((response) => (this.info = response));
+methods: {
+async getData() {
+try {
+let response = await fetch(
+"http://universities.hipolabs.com/search?country"
+);
+this.posts = await response.json();
+} catch (error) {
+console.log(error);
+}
+},
+},
+created() {
+this.getData();
 },
 };
+
 </script>
+
+
+
+

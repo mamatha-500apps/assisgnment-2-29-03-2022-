@@ -10,12 +10,11 @@ export default
    props:{
        msg:String,
        name:String,
-     
    },
    methods:{
        fun()
        {
-            console.log("Hello")
+           alert("Hello");
        }
    }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <div id="root">
+        <h1 id="root2">DOM Nodes</h1>
+        <p id="root1">This is Html ELements</p>
+        <p id="root4">Removing content</p>
+        <button onclick="myfun()">Remove</button>
+    </div>
+    <script>
+const para = document.createElement("h3");
+const node = document.createTextNode("This is Mamatha");
+para.appendChild(node);
+const element = document.getElementById("root");
+const child=document.getElementById("root1");
+const content=document.getElementById("root4");
+//element.removeChild(content);
+element.replaceChild(para,child);
+ element.appendChild(para);
+element.insertBefore(para,child);
+function myfun() {
+document.getElementById("root1").remove();
+}
+    </script>
+</body>
+</html>

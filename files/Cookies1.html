@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>display login details in cookies</title>
+</head>
+
+<body>
+    <form onsubmit=display()>
+        <label>Username:</label> <input type="text" placeholder="Username" id="un" required><br><br>
+        <label>Password:</label> <input type="password" placeholder="password" id="pw" required><br><br>
+        <button type="submit" onclick=createCookie()>login</button>
+        <script>
+            function display() {
+                document.write(document.getElementById("un").value + "<br>" + document.getElementById("pw").value);
+            }
+            function createCookie(Uname, pwds) {
+                let username = document.getElementById("un"); 
+                let password = document.getElementById("pw");
+                date = new Date();
+                var expire = new Date();
+                expire.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+                document.cookie = "username=" + username.value + ";path=/" + ";expires" + expire.toUTCString();
+                document.cookie = "password=" + encodeURI(password.value) + ";path=/" + ";expires" + expire.toUTCString();
+            }
+            window.onload = function () {
+                document.getElementById("un").value = username;
+                document.getElementById("pw").value = password;
+            } </script>
+    </form>
+</body>
+
+</html>
