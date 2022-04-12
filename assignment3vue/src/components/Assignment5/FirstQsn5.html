@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<P>First</P>
+<button onclick="fun()">Alphabatical</button>
+<button onclick="fun1()">reverse</button>
+</head>
+<body>
+<script> 
+ let Users =
+[{name:'500apps',id:1},
+{name:'Technologies',id:2},
+{name:'Agile',id:3},
+{name:'Mantra',id:4},
+{name:'Clockly',id:5},
+{name:'CRM',id:6},
+{name:'500apps',id:7}]
+let field='name';
+let reverse=Users.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString()))
+function fun(){
+console.log(Users.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString())));
+}
+  function fun1(){
+    console.log(reverse.reverse())
+  }
+</script>
+</body>
+</html>
