@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <!-- <h1>Question-3</h1> -->
+</head>
+<body>
+    <p id="demo"></p>
+  
+    <script>
+       var array= [
+{"category1": [{ "name": "cat1", 
+"description": "it is cat1", 
+"details": ["name", "category", "age", "contact"]
+}]
+}
+,{"category2": 
+[{ "name": "cat2", 
+"description": "it is cat2", 
+"details": ["name2", "category2", "age2", "contact2"]
+}]
+}
+]
+
+function fun()
+{
+document.write(this.array[0].category1[0].details+"</br>"+this.array[1].category2[0].details)
+}
+fun();
+    </script>
+</body>
+</html>
