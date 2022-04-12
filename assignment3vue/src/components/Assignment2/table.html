@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <p id="root"></p>
+    <!-- <table id="mytable">
+
+        <thead>
+        <tr>
+        <th>Name</th>
+        <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td> Agile CRM</td>
+        <td>A company of excellence</td>
+        </tr>    
+        <td>mantra technologies</td>
+        <td>500apps</td>
+    </tr>
+    <td>500apps Python"</td>
+    <td>Backend built using python</td>
+    </tr>
+    <td>500apps infinity</td>
+    <td>Built using Vue js</td>
+    </tbody>
+        </table> -->
+        
+<button onclick="myFunction()">Try it</button>
+
+<script>
+    table_data = [{ name :" Agile CRM" , description:" A company of excellence"}, 
+    {name:"mantra technologies", description:"500apps" },,
+    {name:"500apps Python", description:"Backend built using python" },
+    {name:"500apps infinity", description:"Built using Vue js"}]
+   
+    function myFunction() {
+  document.getElementById("root").innerHTML = table_data.name;
+}
+    
+</script>
+   
+</body>
+</html>
