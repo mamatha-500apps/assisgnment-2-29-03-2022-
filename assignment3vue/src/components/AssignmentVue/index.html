@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <!-- Qn-7 -->
+</head>
+
+<body>
+    <p id="root"></p>
+    <script>
+       var users = [ { id: 20, name: 'Captain Piett' }, 
+        { id: 24, name: 'General Veers' }, 
+        { id: 56, name:'Admiral Ozzel' }, 
+        { id: 88, name: 'Commander Jerjerrod' } ];
+      var index=users.findIndex(item =>item.id==56);
+document.getElementById("root").innerHTML=index;
+    </script>
+</body>
+</html>
