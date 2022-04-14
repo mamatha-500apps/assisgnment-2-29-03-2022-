@@ -1,0 +1,15 @@
+<template>
+    <div>
+        <p>msg:{{msg}}</p>
+         <p>name:{{name}}</p>
+    </div>
+</template>
+<script>
+export default
+{
+   props:{
+       msg:String,
+       name:String,   
+   },
+}
+</script>
