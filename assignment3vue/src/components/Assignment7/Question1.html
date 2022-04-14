@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<p></p>
+</head>
+<body>
+ <script>
+     const circle = {
+radius: 20,
+diameter() {
+  return this.radius * 2;
+},
+perimeter: () => 2 * Math.PI * this.radius,
+};
+console.log(circle.diameter());//Output will be 40 As we are calling the fuction using objectname
+console.log(circle.perimeter());//output will be NAN
+    </script>
+</body>
+</html>

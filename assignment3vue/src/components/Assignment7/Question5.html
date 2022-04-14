@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+<p>Joining All Elements</p>
+</head>
+<body>
+    <p id="root"></p>
+    <script>
+        myColor = ["Red", "Green", "White", "Black"];
+        document.getElementById("root").innerHTML=(myColor+" </br> " +myColor.join('+')+"</br>"+myColor.join('  '))
+    </script>
+</body>
+</html>
