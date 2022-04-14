@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <p>Double Elements of an Array</p>
+</head>
+<body>
+    <script>
+        const a = [29, 41, 46.5];
+        const doubled = a.reduce((total, amount) => {
+            total.push(amount * 2);
+            return total;
+        }, []);
+        document.write("input : " + a),
+            document.write("</br>Output  :    "+ doubled);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+<P>Getting Unique values from Array</P>
+</head>
+<body>
+    <script>
+        let a=[1,1,2,2,2,3,4,3,2]
+        let unique=a.filter((item,index,array)=>array.indexOf(item)===index);
+document.write(unique);       
+    </script>
+</body>
+</html>
