@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        callback
+    </head>
+    <body>
+        <script>
+            function myDisplayer(something)
+            {
+                console.log(something)
+            }
+            function second(num1,num2,first_call){
+               
+                var sum=num1+num2
+                console.log("second statement")
+                first_call(sum);
+
+            }
+            second(5,5,myDisplayer)
+        </script>
+
+            
+        
+    </body>
+</html>
