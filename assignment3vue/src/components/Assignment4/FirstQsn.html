@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <head>
-    <button onclick="myfun()">Time</button>
+    <form name="myform" method="post" onsubmit="myfun()">
+        <input type="text" name="word" placeholder="Enter Text" />
+        <button onclick="myfun()">Search</button>
+    </form>
 </head>
 <body>
     <script>
-    var array_names = ["agile","crm","mantra","technologies","500apps","infinity"];
-    function myfun()
-    {
-        
-    }
+        function myfun() 
+        {
+            const array = ["agile", "crm", "mantra", "technologies", "500apps", "infinity"];
+            const substring = document.myform.word.value;
+            const match = array.filter(element => 
+            {
+                if (element.includes(substring))
+                {
+                    return true;
+                }
+            });
+            document.write(match);
+            if (match !== array) {
+                document.write("error");
+            }
+        }
     </script>
 </body>
+
 </html>
