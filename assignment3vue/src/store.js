@@ -42,13 +42,5 @@ const store = new Vuex.Store({
       return completeTodos.length;
     },
   },
-  actions: {
-    getTodos({ commit }) {
-      fetch("https://jsonplaceholder.typicode.com/todos?userId=1")
-        .then((res) => res.json())
-        .then((data) => commit("addTodos", data))
-        .catch((error) => console.log(error));
-    },
-  },
 });
 export default store;
