@@ -1,26 +1,27 @@
 <template>
   <div id="app">
-    <router-view/>
-    
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <FirstQn/>
-    <SecondQsn/>
-    <ThirdQsn/>
-    <FifthQsn/>
-    <TenthQsn  />
- <EighthQsn/>
- <SeventhQsn/>
- <SixthQsn />
- <!-- <Dynamicpro1 :msg="msg" ref="refo" :name="name"/>
+    <router-view />
+    <TodoForm />
+    <TodoList />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <FirstQn />
+    <SecondQsn />
+    <ThirdQsn />
+    <FifthQsn />
+    <TenthQsn />
+    <EighthQsn />
+    <SeventhQsn />
+    <SixthQsn />
+    <!-- <Dynamicpro1 :msg="msg" ref="refo" :name="name"/>
  <button @click="func()">click here</button> -->
- <CallBack/>
- <QuestionSix/>
- <QuestionSixa/>
- <LoginForm/>
- <TableVue/>
- <QuestionFour/>
- <FourthQsn5/>
- <Searching/>
+    <CallBack />
+    <QuestionSix />
+    <QuestionSixa />
+    <LoginForm />
+    <TableVue />
+    <QuestionFour />
+    <FourthQsn5 />
+    <Searching />
   </div>
 </template>
 
@@ -31,7 +32,7 @@
 // import ThirdQsn from './components/ThirdQsn.vue'
 //  import FifthQsn from './components/FifthQsn.vue'
 // import SeventhQsn from './components/SeventhQsn.vue'
-  // import TenthQsn from './components/TenthQsn.vue'
+// import TenthQsn from './components/TenthQsn.vue'
 // import EighthQsn from './components/EighthQsn.vue'
 //import SixthQsn from './components/SixthQsn.vue'
 //import Dynamicpro1 from './components/DynamicProp.vue'
@@ -43,43 +44,47 @@
 //import QuestionFour from './components/QuestionFour.vue'
 // import FourthQsn5 from './components/FourthQsn5.vue'
 //import Searching from './components/Searching.vue'
+import TodoList from "./components/TodosList/TodoList.vue";
+import TodoForm from "./components/TodosList/TodoForm.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
+    TodoList,
+    TodoForm,
     // HelloWorld,
     //  FirstQn,
     // SecondQsn,
     // ThirdQsn,
     // FifthQsn,
-  //  TenthQsn,
-  //  EighthQsn,
-  // SeventhQsn,
- //SixthQsn,
-  //Dynamicpro1,
-  // CallBack
-// TableVue,
-// LoginForm
-//QuestionSix,
-//  QuestionSixa
-//QuestionFour
-//Searching
+    //  TenthQsn,
+    //  EighthQsn,
+    // SeventhQsn,
+    //SixthQsn,
+    //Dynamicpro1,
+    // CallBack
+    // TableVue,
+    // LoginForm
+    //QuestionSix,
+    //  QuestionSixa
+    //QuestionFour
+    //Searching
   },
-// data(){
-//   return{
-//     msg:"Hi",
-//     name:"Mamatha"
-//   }
-// },
-// methods:{
-//   func(){
-//   this.$refs.refo.fun();
-//  console.log("Executed")
-// }
-// }
-// props:{
-//   name:String,
-// }
-}
+  // data(){
+  //   return{
+  //     msg:"Hi",
+  //     name:"Mamatha"
+  //   }
+  // },
+  // methods:{
+  //   func(){
+  //   this.$refs.refo.fun();
+  //  console.log("Executed")
+  // }
+  // }
+  // props:{
+  //   name:String,
+  // }
+};
 </script>
 
 <style>
@@ -92,4 +97,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-
