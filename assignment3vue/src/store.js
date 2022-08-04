@@ -13,13 +13,14 @@ const store = new Vuex.Store({
     todoList: [],
   },
   mutations: {
-    addTodo(state, title) {
+    addTodo(state, title,date) {
       state.todoList = [
         ...state.todoList,
         {
           id: Math.random(),
           title,
           completed: false,
+         date
         },
       ];
     },
@@ -34,8 +35,16 @@ const store = new Vuex.Store({
         return item;
       });
     },
+    deleteTodo(state ,id){
+      let list = state.todoList
+      for(var i = 0; i < list.length; i++) {
+    if(list[i].id == id) {
+        list.splice(i, 1);
+        break;
+    }
+    }
+    }
   },
-  // This should be pasted after the mutations property
   getters: {
     completeTodosLength: (state) => {
       const completeTodos = state.todoList.filter((item) => item.completed);
